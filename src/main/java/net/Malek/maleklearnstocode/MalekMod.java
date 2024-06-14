@@ -58,6 +58,8 @@ public class MalekMod
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BURGER);
+            event.accept(ModItems.BURNTBURGER);
+            event.accept(ModItems.ENERGYSWORD);
         }
     }
 

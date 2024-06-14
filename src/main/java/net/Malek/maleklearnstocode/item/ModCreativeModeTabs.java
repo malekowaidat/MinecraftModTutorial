@@ -13,11 +13,13 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MalekMod.MODID);
 
-    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutotial_tab",
+    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BURGER.get()))
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.BURGER.get());
+                        output.accept(ModItems.BURNTBURGER.get());
+                        output.accept(ModItems.ENERGYSWORD.get());
                     })
                     .build());
 
